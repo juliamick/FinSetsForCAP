@@ -59,4 +59,20 @@ Display( phi );
 #! [ 3, [ 1, 2, 1 ], 2 ]
 PreCompose( pi, phi ) = tau;
 #! true
+
+
+N := FinSet( 2 );
+#! <An object in SkeletalFinSets>
+M := FinSet( 3 );
+#! <An object in SkeletalFinSets>
+f := MapOfFinSets( N, [ 1, 2 ], M );
+#! <A morphism in SkeletalFinSets>
+g := MapOfFinSets( N, [ 2, 3 ], M );
+#! <A morphism in SkeletalFinSets>
+C := Coequalizer( f, g );
+#! <An object in SkeletalFinSets>
+AsList( C );
+#! [ 1 ]
+pi := ProjectionOntoCoequalizer( [ f,g ] );
+#! <A morphism in SkeletalFinSets>
 #! @EndExample
